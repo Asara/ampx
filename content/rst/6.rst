@@ -1,0 +1,11 @@
+Recovering the blog
+#################################
+:date: 2014-08-04
+:category: blog
+:author: Amar
+
+Slowly but surely
+------------------
+
+After a failure of my SD card from a power surge, I've got my blog back up.  Just have to get the theme and all working again, ignore the french!
+
