@@ -1,0 +1,203 @@
+Gentoo on the Google Pixel pt. 2
+#################################
+:date: 2014-01-23
+:category: pixel
+:tags: howto
+:author: Amar
+
+Notes
+------
+I ended up slowing down and taking a while to fully explore all the options in building a Gentoo system on my Pixel.  This included me reinstalling from scratch multiple times and learning along the way.  This final product is a Pixel install with a 3.12.8 kernel, with the /,/home, and swap partitions sitting in a LVM encrypted with LUKS.  Follow through and you will be able to get the same.  Also, this install uses the SystemRescueCD (which is based on Gentoo).
+
+Paritioning Drives
+-------------------
+
+Since we are using a SSD for the install, GPT is recommended, which complicates things a tad bit.
+Using parted, we have to create 3 partitions, the grub-bios partition, /boot, and the 3rd for the LVM.  The grub-bios partition is 2mb, the /boot is 512mb (for multiple kernels), and the LVM will be the rest of the drive.
+
+.. code-block:: bash
+
+  parted -a optimal /dev/sda
+  mklabel gpt
+  (parted) unit mib
+  (parted) mkpart primary 1 3
+  (parted) name 1 grub
+  (parted) set 1 bios_grub on
+  (parted) print
+  (parted) mkpart primary 3 515
+  (parted) name 2 boot
+  (parted) mkpart primary 515 -1
+  (parted) name 3 rootfs
+
+Encrypting and Creating LVM/Filesystems
+---------------------------------------
+
+Ecrypt /dev/sda3, mount it and create the lvm
+
+.. code-block:: bash
+
+  cryptsetup -y --cipher aes-cbc-essiv:sha256 --key-size 256 luksFormat /dev/sda3
+  cryptsetup luksOpen /dev/sda3 rootfs
+  pvcreate /dev/mapper/rootfs
+  lvcreate -L1024m -nswap rootfs
+  lvcreate -L20480m -nroot rootfs
+  lvcreate -l 100%FREE home rootfs
+
+
+Create filesystems on the multiple logical volumes you've created and mount them to their proper locations:
+
+.. code-block:: bash
+
+  mkswap -L SWAP /dev/mapper/rootfs-swap
+  swapon /dev/mapper/rootfs-swap
+  mkfs.ext4 -j /dev/mapper/rootfs-root -L ROOT
+  mount /dev/mapper/rootfs-root /mnt/gentoo
+  mkdir /mnt/gentoo/home
+  mkfs.ext4 -j /dev/mapper/rootfs-home -L HOME
+  mount /dev/mapper/rootfs-home /mnt/gentoo/home
+  mkdir /mnt/gentoo/boot
+  mkfs.ext4 -j /dev/sda2 -L BOOT
+  mount /dev/sda2 /mnt/gentoo/boot
+
+
+Download Gentoo Stage3
+-----------------------------
+
+Change directories into /mnt/gentoo, download the stage3 and extract it.  Copy over resolv.conf
+
+.. code-block:: bash
+
+  cd /mnt/gentoo
+  elinks http://www.gentoo.org/main/en/mirror.xml
+  tar xvjpf stage3-.tar.bz2
+  cp -L /etc/resolv.conf /mnt/gentoo/etc/
+
+
+Prepare Portage
+---------------
+
+nano /mnt/gentoo/etc/portage/make.conf
+
+.. code-block:: bash
+
+  CFLAGS="-march=k8 -O2 -pipe"
+  MAKEOPTS="-j2"
+  mirrorselect -i -o >> /mnt/gentoo/etc/portage/make.conf
+  mirrorselect -i -r -o >> /mnt/gentoo/etc/portage/make.conf
+
+Mount Virtual Filesystems
+-------------------------
+
+.. code-block:: bash
+
+  mount -t proc proc /mnt/gentoo/proc
+  mount --rbind /sys /mnt/gentoo/sys
+  mount --rbind /dev /mnt/gentoo/dev
+
+
+Chroot into your new system
+----------------------------
+  
+.. code-block:: bash
+
+  chroot /mnt/gentoo /bin/bash
+  source /etc/profile
+  export PS1="(chroot) $PS1"
+
+
+Initilize Portage
+-----------------
+
+.. code-block:: bash
+
+  emerge-webrsync
+  emerge --sync
+
+
+Set up localization information
+-------------------------------
+
+.. code-block:: bash
+
+  echo "Continent/Country" > /etc/timezone
+  emerge --config sys-libs/timezone-data
+  nano -w /etc/locale.gen
+  locale-gen
+  eselect locale list
+  eselect locale set # Your locale here
+  env-update && source /etc/profile
+
+Notes
+-----
+At this point I like to install a few apps I use, that way I won't have to worry about them later.  I'd recommend installing vim, NetworkManager (for nmcli), and really anything else you expect to use.  I also wanted to use systemd, so I had to prep for that. That includes installing udev with -systemd in make.conf, the installing systemd (obviously remove the - after installing udev), and then uninstalling udev, since systemd provides virtual/udev.
+
+
+Kernel Setup
+------------
+
+.. code-block:: bash
+
+  echo "=sys-kernel/gentoo-sources-3.12.8" >> /etc/portage/package.keywords
+  emerge gentoo-sources genkernel-next lvm2 cryptsetup grub vim
+
+(As a side note, genkernel-next is required for a systemd install to include udev in the kernel)
+
+.. code-block:: bash
+
+  vim /etc/genkernel.conf
+
+    LVM="yes"
+    LUKS="yes"
+    BUSYBOX="yes"
+    MENUCONFIG="yes"
+    DISKLABEL="yes"
+
+
+
+Create the kernel
+------------------
+  
+.. code-block:: bash
+  
+  genkernel --udev all
+
+Remember to enable support for crypto devices in the kernel, along with anything else you may need/want.
+
+.. code-block:: bash
+
+  Device Drivers
+    Multi-device support (RAID and LVM)
+      [*] Multiple devices driver support (RAID and LVM)
+        <*>  Device mapper support
+        <*>  Crypt target support
+
+  Cryptographic API 
+    <*>  SHA256 digest algorithm
+    <*>  AES cipher algorithms
+
+
+Installing Grub2
+-----------------
+
+.. code-block:: bash
+
+  vim /etc/default/grub
+
+    GRUB_DISTRIBUTOR="Gentoo"
+    GRUB_DEFAULT=0
+    GRUB_HIDDEN_TIMEOUT=0
+    GRUB_HIDDEN_TIMEOUT_QUIET=true
+    GRUB_TIMEOUT=3
+    GRUB_PRELOAD_MODULES=lvm
+    GRUB_CRYPTODISK_ENABLE=y
+    GRUB_DEVICE=/dev/sda1
+    GRUB_CMDLINE_LINUX="real_init=/usr/lib/systemd/systemd quiet real_root=/dev/mapper/rootfs-root crypt_root=/dev/sda3 dolvm"
+  grub2-install --modules="configfile linux crypto search_fs_uuid luks lvm" --recheck /dev/sda
+  grub2-mkconfig -o /boot/grub/grub.cfg
+
+Reboot the machine and you should have a working Gentoo install on your Google Pixel!
+
+
+`Part 3`_
+
+.. _`Part 3`: http://ampx.usr.sh/posts/2014/Jan/29/gentoo-on-the-google-pixel-pt-3.html

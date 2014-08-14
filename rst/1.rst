@@ -1,0 +1,43 @@
+Gentoo on the Google Pixel pt. 1
+#################################
+:date: 2013-12-02
+:category: pixel
+:tags: howto
+:author: Amar
+
+Notes
+-------
+
+1) I would recommend getting a USB mouse because it is a pain otherwise. The modules are not built in for the touchscreen (atmel_mxt_ts nor chromeos_laptop), and as such you might get annoyed.  If you can deal with working in term, ignore this.
+
+2) This will remove ChromeOS from the SDD, but it is fairly straightforward recovering it if you get sick of Linux.  Here_ is how you restore your machine.
+
+Enabling access to SeaBIOS
+----------------------------
+
+Before installing Linux to the SDD, you have to first enable access to the secondary BIOS installed on the device (currently no way to access this manually and you are stuck with a 5 second wait on each boot.)
+
+1) In order to put your Pixel into developer mode, hold the Escape and Refresh keys while booting the machine (ESC is F1, Refresh is F3).  Press Ctrl-D followed by Enter, which will enable dev mode and wipe all user data from the Pixel.  Dev mode also disables OS checking, so you will get a message at every boot.  
+
+2) Boot into ChromeOS after enabling dev mode (press Ctrl-D in order to get into the OS when the OS checking message appears).  Log in as a guest, press Ctrl-Alt-T to bring up a crosh (ChromeOS Shell) window, and start a shell:
+
+.. code-block:: bash
+
+    shell command
+    # Get root
+	sudo bash
+    # enable USB booting in SeaBIOS
+	crossystem dev_boot_usb=1
+
+3) Reboot the machine, and once the OS check window comes up, press Ctrl-L to enter SeaBIOS.  After this the process is simple.  My next post will be about installing specifically Gentoo onto the SSD.  For any other OS, just install onto /dev/sda1, with the bootloader installed to the MBR of the disk, and you should be good to go.  On bootup, enable the two drivers I mentioned up there, and you will have a working system.  
+
+Aditional note
+--------------
+If you are unable to boot from the USB due to memory issues, add mem=4G to the kernel command line, and if that doesn't work, as a failsafe, mem=1G should get you into your distro's LiveOS.
+
+
+`Part 2`_ 
+
+.. _`Part 2`: http://ampx.usr.sh/posts/2014/Jan/23/gentoo-on-the-google-pixel-pt-2.html
+.. _Here: http://support.google.com/chromeos/bin/answer.py?hl=en&answer=1080595
+

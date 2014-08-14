@@ -1,0 +1,60 @@
+Gentoo on the Google Pixel pt. 4
+#################################
+:date: 2014-02-17
+:category: pixel
+:tags: howto
+:author: Amar
+
+
+Tiny Fixes
+--------------
+
+These are really just fixes for the font rendering/zoom levels of everything.  As it turns out the world/userspace tools aren't really ready for high DPI.  As such these are some quick tweaks to get everything not looking ridiculous.  I use Firefox as my browser, urxvt (with 256-color) as my terminal, and i3 as my window manager. 
+
+
+Fonts
+-------
+
+Enable these using eselect 
+
+.. code-block:: bash
+
+  Pixel Sub-Rendering: 10-sub-pixel-rgb.conf
+  LCD Filter: 11-lcdfilter-default.conf
+
+
+Xdefaults
+------------
+
+.. code-block:: bash
+
+  !-- Xft settings -- !
+  Xft.dpi:        180
+  Xft.rgba:       rgb
+  Xft.hinting:    true
+  Xft.hintstyle:  hintfull
+  Xft.antialiasing: false
+  
+  ! -- Fonts -- !
+  urxvt.font:xft:DejaVu Sans Mono:size=8
+  urxvt.boldfont:xft:DejaVu Sans Mono:size=8
+  
+  ! -- URxvt settings -- !
+  
+  urxvt*geometry: 80x30
+  !urxvt.font: 9x15
+  urxvt*background:       #212629
+  urxvt*foreground:       #FFFFFF
+  urxvt*scrollBar:        false
+  urxvt*matcher.button:   1
+  urxvt*cursorBlink:      true
+  urxvt*cursorColor:      #c1c8c9
+  urxvt.transparent:      false
+  urxvt*allow_bold:       true
+  urxvt*inheritPixmap:    false
+
+
+Firefox Settings
+-----------------
+
+After some tinkering, I've realized the best bet is to get the Default Full Zoom addon and set the default zoom between 130% and 140%.  
