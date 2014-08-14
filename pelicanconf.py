@@ -12,9 +12,6 @@ TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = u'en'
 
-
-PDF_GENERATOR = True
-
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -29,3 +26,6 @@ DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
