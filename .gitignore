@@ -62,3 +62,8 @@ docs/_build/
 [Ll]ib
 [Ll]ib64
 [Ss]cripts
+
+
+### PELICAN ###
+cache/
+output/
