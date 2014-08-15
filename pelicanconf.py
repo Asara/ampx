@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Amarpreet Minhas'
 SITENAME = u'AmpX'
 SITEURL = 'http://ampx.minhas.io'
-STATIC_PATHS = ['pdfs',]
+STATIC_PATHS = ['pdfs','images', 'docs']
 
 PATH = 'content'
 
