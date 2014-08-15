@@ -38,6 +38,6 @@ If you are unable to boot from the USB due to memory issues, add mem=4G to the k
 
 `Part 2`_ 
 
-.. _`Part 2`: http://ampx.usr.sh/posts/2014/Jan/23/gentoo-on-the-google-pixel-pt-2.html
+.. _`Part 2`: http://ampx.minhas.io/posts/2014/Jan/23/gentoo-on-the-google-pixel-pt-2.html
 .. _Here: http://support.google.com/chromeos/bin/answer.py?hl=en&answer=1080595
 

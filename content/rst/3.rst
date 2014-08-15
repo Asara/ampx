@@ -22,4 +22,4 @@ grub2_ /etc/default/grub
 
 .. _grub2: http://pastebin.com/mhhPSVT3
 
-.. _`Part 4`: http://ampx.usr.sh/posts/2014/Feb/17/gentoo-on-the-google-pixel-pt-4.html
+.. _`Part 4`: http://ampx.minhas.io/posts/2014/Feb/17/gentoo-on-the-google-pixel-pt-4.html

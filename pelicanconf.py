@@ -3,8 +3,9 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Amarpreet Minhas'
-SITENAME = u'Ampx Blog'
+SITENAME = u'AmpX'
 SITEURL = 'http://ampx.minhas.io'
+STATIC_PATHS = ['pdfs',]
 
 PATH = 'content'
 
@@ -20,6 +21,7 @@ TRANSLATION_FEED_ATOM = None
 # Blogroll
 LINKS = (('Github', 'http://github.com/Asara'),
          ('Bitbucket', 'http://bitbucket.com/AmarpreetMinhas'),
+	 ('Resume', 'http://ampx.minhas.io/pdfs/Resume.pdf'),
         )
 
 DEFAULT_PAGINATION = 5
@@ -27,8 +29,8 @@ DEFAULT_PAGINATION = 5
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
+ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}.html'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}.html'
 
 
 THEME = 'themes/basic'

@@ -10,7 +10,8 @@
 
 
 body {
-    font-family: "Lucida Grande", "Gargi_1.7", "Garuda", "Jamrul", "Loma", "Malayalam", "Mukti Narrow", sans-serif;
+    @import url(http://fonts.googleapis.com/css?family=Exo+2:400,700|Bitter:400,700|Lora:700);
+    font-family: "Exo 2", "Lucida Grande", "Gargi_1.7", "Garuda", "Jamrul", "Loma", "Malayalam", "Mukti Narrow", sans-serif;
     font-size: 16px;
     line-height: 1.5em;
     color: #444;

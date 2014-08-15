@@ -2,7 +2,7 @@ Docker support on the Google Pixel
 ####################################
 :date: 2014-03-28
 :category: pixel
-:tags: docker gentoo pixel
+:tags: docker
 :author: Amar
 :excerpt: Docker kernel support gentoo
 

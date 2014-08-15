@@ -200,4 +200,4 @@ Reboot the machine and you should have a working Gentoo install on your Google P
 
 `Part 3`_
 
-.. _`Part 3`: http://ampx.usr.sh/posts/2014/Jan/29/gentoo-on-the-google-pixel-pt-3.html
+.. _`Part 3`: http://ampx.minhas.io/posts/2014/Jan/29/gentoo-on-the-google-pixel-pt-3.html
