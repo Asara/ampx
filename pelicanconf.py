@@ -21,7 +21,8 @@ TRANSLATION_FEED_ATOM = None
 # Blogroll
 LINKS = (('Github', 'http://github.com/Asara'),
          ('Bitbucket', 'http://bitbucket.com/AmarpreetMinhas'),
-         ('Resume', 'http://ampx.minhas.io/pdfs/Resume.pdf'),
+         ('Resume (pdf)', 'http://ampx.minhas.io/pdfs/Resume.pdf'),
+         ('Resume (docx)', 'http://ampx.minhas.io/docs/Resume.docx'),
          ('Email', 'mailto:amarpreet@minhas.io'),
         )
 
