@@ -35,6 +35,7 @@ DoubleVerify  -  Production Systems Engineer                     Oct. 2014 - Now
 - Scripting in Bash and Python for a multitude of networking and service ops
 - Wrote and integrated applications for multiple APIs including AWS and AppNexus
 - Reformatted internal apps into an RPM with init scripts for release to clients
+- Created a fully automated RPM creation system with a Yum repo for distribution
 - Developed scripts for daily compression and archival for terabytes of data
 - Implemented kernel configuration changes to improve application performance
 - Utilized Ansible to manage the configuration for a various Linux servers
