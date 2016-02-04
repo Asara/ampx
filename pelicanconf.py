@@ -4,8 +4,11 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Amarpreet Minhas'
 SITENAME = u'AmpX'
-SITEURL = 'http://ampx.minhas.io'
-STATIC_PATHS = ['pdfs','images', 'docs']
+SITEURL = 'https://ampx.minhas.io'
+STATIC_PATHS = ['pdfs','images', 'txt', 'extra/robots.txt']
+EXTRA_PATH_METADATA = {
+        'extra/robots.txt': {'path': 'robots.txt'},
+    }
 
 PATH = 'content'
 
@@ -19,10 +22,9 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS = (('Github', 'http://github.com/Asara'),
-         ('Bitbucket', 'http://bitbucket.com/AmarpreetMinhas'),
-         ('Resume (pdf)', 'http://ampx.minhas.io/pdfs/Resume.pdf'),
-         ('Resume (docx)', 'http://ampx.minhas.io/docs/Resume.docx'),
+LINKS = (('Github', 'https://github.com/Asara'),
+         ('Bitbucket', 'https://bitbucket.com/AmarpreetMinhas'),
+         ('Resume', 'https://ampx.minhas.io/txt/Resume.txt'),
          ('Email', 'mailto:amarpreet@minhas.io'),
         )
 
