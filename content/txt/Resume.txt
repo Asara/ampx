@@ -4,21 +4,13 @@
 --------------------------------------------------------------------------------
 SUMMARY
 --------------------------------------------------------------------------------
-I am a highly motivated and self driven technologist with a penchant for open
+I am a highly motivated and self-driven technologist with a penchant for open
 source software.  With a preference for Bash and Python, I have utilized my
-experience and skills to provide support for multiple levels across the tech
-stack.  I have hands on experience with a multitude of systems, including many
-Windows Server editions (2003-2012R2).  I have a heavy preference for free and
-open source software and have used Linux distributions such as Arch, Centos,
-Debian, Gentoo, and Red Hat Enterprise Linux, and even Unixen systems including
-FreeBSD, FreeNAS, and pfSense. Working with production systems has also allowed
-me to become acquainted with a multitude of networking devices, including Citrix 
-Netscaler, F5 switches, and many Cisco routers, and switches.  Storage services
-such as RAID, SANs, and ZFS have been employed, manually and through vendors as
-NetApp.  Virtualization has also been utilized, with both vendor specific
-solutions such as Citrix XenServer and VMWare vSphere, open source hypervisors
-such as oVirt (KVM), and RedHat Enterprise Virtualization have been utilized as
-well.  FreeBSD jails have also been used for service isolation and security.
+experience and skills to provide support for various organizations with differnt
+stacks.  With professional experience in both security and operations, I am able
+to think broadly about problems. I enjoy new technologies and challenges always
+hoping to learn more. Much of my time is spent on a black screen with white text
+and as such this resume was written in Vim.
 
 --------------------------------------------------------------------------------
 EXPERIENCE
@@ -45,8 +37,8 @@ DoubleVerify  -  Production Systems Engineer                     Oct. 2014 - Now
 Boys & Girls Harbor  -  Systems Administrator              Sept. 2013 - May 2014
 1 E 104 Street, New York NY, 10029
 - Conducted regular security audits for clients and their networks
-- Modernized a failing telecommunications infrastructure to utilize VoIP 
-    services and implimented Avaya virutal applications.
+- Modernized a failing telecommunications infrastructure to utilize VoIP
+    services and implemented Avaya virtual applications.
 - Implemented osTicket and moinmoin for ticketing and documentation on Debian
 - Installed and configured Opsview Core for monitor clients, servers, services
 - Developed an automated SMS notification system using PYGVoice and Opsview.
@@ -75,21 +67,6 @@ St. John's University - Technical Support                   Jan 2010 - June 2013
 - Conducted the imaging of desktops by configuring a PXE server with Clonezilla
 
 --------------------------------------------------------------------------------
-PERSONAL PROJECTS
---------------------------------------------------------------------------------
-- Assembled a physical server with FreeBSD,ZFS, and jails for a private cloud
-    Server includes jails for FreshRSS, Gogs (git), MariaDB, Nginx, Wallabag etc
-- Created a Django forum with Apache/MySQL for the BlackstormCSF Community
-- Built a KVM server on a Dell Edge with Proxmox-VE using RAID1 for CS Society
-- Installed a KVM server using oVirt hosting CoreOS to manage Docker containers
-- Maintain e-mail servers running AMaVIS, dovecot, MySQL , postfix, RoundCube
-- Configured and use a pfSenne firewall including VLANS, subnets, and DHCP/DNS
-- Employing ejabberd and nginx, created a chat server with crypto.cat protocol
-- Documented install Gentoo using LVM, dm-crypt for FDE and systemd init
-- Host a static blog using Pelican/Python hosted using nginx at ampx.minhas.io
-- Used Jenkins and Ansible to manage and deploy a heterogeneous set of apps
-
---------------------------------------------------------------------------------
 EDUCATION
 --------------------------------------------------------------------------------
 St. John's University
@@ -104,3 +81,19 @@ ORGANIZATIONS AND MEMBERSHIPS
  - Vice President of the St. John's Computer Science Society
  - Member of the High Technology Crime Investigation Association
  - NYS Certificate of Diplomacy and International Law
+
+--------------------------------------------------------------------------------
+PERSONAL PROJECTS
+--------------------------------------------------------------------------------
+- Assembled a physical server with FreeBSD,ZFS, and jails for a private cloud
+    Server includes jails for FreshRSS, Gogs (git), MariaDB, Nginx, Wallabag etc
+- Created a Django forum with Apache/MySQL for the BlackstormCSF Community
+- Built a KVM server on a Dell Edge with Proxmox-VE using RAID1 for CS Society
+- Installed a KVM server using oVirt hosting CoreOS to manage Docker containers
+- Maintain e-mail servers running AMaVIS, dovecot, MySQL , postfix, RoundCube
+- Configured and use a pfSenne firewall including VLANS, subnets, and DHCP/DNS
+- Employing ejabberd and nginx, created a chat server with crypto.cat protocol
+- Documented install Gentoo using LVM, dm-crypt for FDE and systemd init
+- Host a static blog using Pelican/Python hosted using nginx at ampx.minhas.io
+- Used Jenkins and Ansible to manage and deploy a heterogeneous set of apps
+- Using Elasticsearch, Logstash, and Kibana to gather and visualize various logs
