@@ -24,46 +24,30 @@ MonetaGo -  Systems Architect                                    Nov. 2016 - Now
 DoubleVerify  -  Production Systems Engineer               Oct. 2014 - Nov. 2016
 575 8th Ave, New York NY, 10018
 - Designed and implemented an HAProxy load balancer for all production traffic
-- Provided cradle-to-grave support for all production systems
+- Utilized commodity hardware running HAProxy to replace all F5 Load Balancers
+- Automated creation and management of Hadoop clusters running Spark jobs
 - Migrated internal applications from RHEL 5 to CentOS 6 and later CentOS 7
 - Installation of physical infrastructure including networking devices such as
     Citrix NetScalers, F5 switches, Cisco Blade Servers, NetApp SAN
 - Employed python scripts with boto in order to manage autoscaling for services
 - Designed and implemented Aerospike clusters to provide network caching
-- Created an RPM for distribution to remote clients for service installation
-- Scripting in Bash and Python for a multitude of networking and service ops
-- Wrote and integrated applications for multiple APIs including AWS and AppNexus
-- Reformatted internal apps into an RPM with init scripts for release to clients
-- Created a fully automated RPM creation system with a Yum repo for distribution
 - Developed scripts for daily compression and archival for terabytes of data
-- Implemented kernel configuration changes to improve application performance
-- Utilized Ansible to manage the configuration for a multitude of Linux servers
-- Managed Hadoop clusters and deployed Spark jobs using Ansible
 
 
 Boys & Girls Harbor  -  Systems Administrator              Sept. 2013 - May 2014
 1 E 104 Street, New York NY, 10029
-- Conducted regular security audits for clients and their networks
-- Modernized a failing telecommunications infrastructure to utilize VoIP
-    services and implemented Avaya virtual applications.
 - Implemented osTicket and moinmoin for ticketing and documentation on Debian
 - Installed and configured Opsview Core for monitor clients, servers, services
 - Developed an automated SMS notification system using PYGVoice and Opsview.
-- Maintained Active Directory with ipMail for employee carddav/caldav/email
 - Virtualized and migrated to Symantec Endpoint Protection
-- Managed and expanded internal network services such as DNS and DHCP
 
 
 Pershing Sq. Capital Management - Systems Administrator   June 2013 - Sept. 2013
 888 7th Ave, New York NY, 10019
 - Used a SAN backend to support a migration of physical servers to vSphere VDIs
-- Break fix, maintenance, and upkeep of multiple Debian and Windows servers
 - Built out initial infrastructure for a Data Warehouse Project with vSphere
 - Managed security infrastructure including writing Snort and iptables rules
-- Maintained and distributed physical and virtual RSA IDs
 - Oversaw and expanded the monitoring of the infrastructure via Cacti and Xymon
-- Created golden images for virtual applications in Citrix XenApp
-- Supported an infrastructure of workstations, Bloomberg terminals, and servers
 
 
 St. John's University - Technical Support                   Jan 2010 - June 2013
