@@ -1,12 +1,13 @@
                                Amarpreet Minhas
                                1 (917) 214 9901
                               amarpreet@minhas.io
+                                asara@linux.com
 --------------------------------------------------------------------------------
 SUMMARY
 --------------------------------------------------------------------------------
 I am a highly motivated and self-driven technologist with a penchant for open
 source software.  With a preference for Bash and Python, I have utilized my
-experience and skills to provide support for various organizations with differnt
+experience and skills to provide support for various organizations with varying
 stacks.  With professional experience in both security and operations, I am able
 to think broadly about problems. I enjoy new technologies and challenges always
 hoping to learn more. Much of my time is spent on a black screen with white text
@@ -15,8 +16,14 @@ and as such this resume was written in Vim.
 --------------------------------------------------------------------------------
 EXPERIENCE
 --------------------------------------------------------------------------------
-DoubleVerify  -  Production Systems Engineer                     Oct. 2014 - Now
+MonetaGo -  Systems Architect                                    Nov. 2016 - Now
+900 Broadway, New York NY, 10003
+- 
+
+
+DoubleVerify  -  Production Systems Engineer               Oct. 2014 - Nov. 2016
 575 8th Ave, New York NY, 10018
+- Designed and implemented an HAProxy load balancer for all production traffic
 - Provided cradle-to-grave support for all production systems
 - Migrated internal applications from RHEL 5 to CentOS 6 and later CentOS 7
 - Installation of physical infrastructure including networking devices such as
@@ -30,7 +37,7 @@ DoubleVerify  -  Production Systems Engineer                     Oct. 2014 - Now
 - Created a fully automated RPM creation system with a Yum repo for distribution
 - Developed scripts for daily compression and archival for terabytes of data
 - Implemented kernel configuration changes to improve application performance
-- Utilized Ansible to manage the configuration for a various Linux servers
+- Utilized Ansible to manage the configuration for a multitude of Linux servers
 - Managed Hadoop clusters and deployed Spark jobs using Ansible
 
 
@@ -51,7 +58,7 @@ Pershing Sq. Capital Management - Systems Administrator   June 2013 - Sept. 2013
 888 7th Ave, New York NY, 10019
 - Used a SAN backend to support a migration of physical servers to vSphere VDIs
 - Break fix, maintenance, and upkeep of multiple Debian and Windows servers
-- Built out initial infrastructure for a Data Warehouse Project  with vSphere
+- Built out initial infrastructure for a Data Warehouse Project with vSphere
 - Managed security infrastructure including writing Snort and iptables rules
 - Maintained and distributed physical and virtual RSA IDs
 - Oversaw and expanded the monitoring of the infrastructure via Cacti and Xymon
@@ -85,7 +92,7 @@ ORGANIZATIONS AND MEMBERSHIPS
 --------------------------------------------------------------------------------
 PERSONAL PROJECTS
 --------------------------------------------------------------------------------
-- Assembled a physical server with FreeBSD,ZFS, and jails for a private cloud
+- Assembled a physical server with FreeBSD, ZFS, and jails for a private cloud
     Server includes jails for FreshRSS, Gogs (git), MariaDB, Nginx, Wallabag etc
 - Created a Django forum with Apache/MySQL for the BlackstormCSF Community
 - Built a KVM server on a Dell Edge with Proxmox-VE using RAID1 for CS Society
