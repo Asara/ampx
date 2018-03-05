@@ -18,7 +18,6 @@ EXPERIENCE
 --------------------------------------------------------------------------------
 MonetaGo -  Systems Architect                                    Nov. 2016 - Now
 900 Broadway, New York NY, 10003
-- 
 
 
 DoubleVerify  -  Production Systems Engineer               Oct. 2014 - Nov. 2016
@@ -72,19 +71,3 @@ ORGANIZATIONS AND MEMBERSHIPS
  - Vice President of the St. John's Computer Science Society
  - Member of the High Technology Crime Investigation Association
  - NYS Certificate of Diplomacy and International Law
-
---------------------------------------------------------------------------------
-PERSONAL PROJECTS
---------------------------------------------------------------------------------
-- Assembled a physical server with FreeBSD, ZFS, and jails for a private cloud
-    Server includes jails for FreshRSS, Gogs (git), MariaDB, Nginx, Wallabag etc
-- Created a Django forum with Apache/MySQL for the BlackstormCSF Community
-- Built a KVM server on a Dell Edge with Proxmox-VE using RAID1 for CS Society
-- Installed a KVM server using oVirt hosting CoreOS to manage Docker containers
-- Maintain e-mail servers running AMaVIS, dovecot, MySQL , postfix, RoundCube
-- Configured and use a pfSenne firewall including VLANS, subnets, and DHCP/DNS
-- Employing ejabberd and nginx, created a chat server with crypto.cat protocol
-- Documented install Gentoo using LVM, dm-crypt for FDE and systemd init
-- Host a static blog using Pelican/Python hosted using nginx at ampx.minhas.io
-- Used Jenkins and Ansible to manage and deploy a heterogeneous set of apps
-- Using Elasticsearch, Logstash, and Kibana to gather and visualize various logs
