@@ -3,15 +3,6 @@
                               amarpreet@minhas.io
                                 asara@linux.com
 --------------------------------------------------------------------------------
-SUMMARY
---------------------------------------------------------------------------------
-I am an incredibly technical individual who enjoys finding the marriage between
-technology and real life problems.  Wearing many hats, including pure operations
-as well as the more modern DevOps approach to infrastructure, I enjoy working in
-fast paced environments with lots of moving parts.  This enjoyment has allowed
-me to grow into a position where I am able to keep my hands on a lot of varying
-technology, but also remain a master of my domain.
---------------------------------------------------------------------------------
 EXPERIENCE
 --------------------------------------------------------------------------------
 MonetaGo -  Systems Architect                                    Nov. 2016 - Now
@@ -33,6 +24,7 @@ MonetaGo -  Systems Architect                                    Nov. 2016 - Now
     order to properly secure environments
 - Represented the company in multiple public events and occasions, in both the
     capacity of a developer and business liaison
+- Vetted potential candidates conducting both technical and personal interviews
 
 
 DoubleVerify  -  Production Systems Engineer               Oct. 2014 - Nov. 2016
