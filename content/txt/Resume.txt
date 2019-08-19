@@ -5,7 +5,16 @@
 --------------------------------------------------------------------------------
 EXPERIENCE
 --------------------------------------------------------------------------------
-MonetaGo -  Systems Architect                                    Nov. 2016 - Now
+Gemini Trust -  SRE                                          Oct. 2018 - Present
+315 Park Ave South, New York NY, 10010
+- Logically built out disaster recovery site on bare metal and ran a BCP test
+    against it
+- Developed python scripts to automate updates to our IPAM/DCIM systems
+- Served as the infrastructure liaison for CBOE futures settlements
+- Assisted in the hiring process, including conducting hands on tests
+
+
+MonetaGo -  Systems Architect                              Nov. 2016 - Oct. 2018
 900 Broadway, New York NY, 10003
 - Developed and implemented the entire CI/CD pipeline with standard DevOps tools
     such as Jenkins, Ansible, Packer, Terraform, Consul, etc.
@@ -49,13 +58,6 @@ Pershing Sq. Capital Management - Systems Administrator   June 2013 - Sept. 2013
 - Used a SAN backend to support a migration of physical servers to vSphere VDIs
 - Managed security infrastructure including writing Snort and iptables rules
 - Oversaw and expanded the monitoring of the infrastructure via Cacti and Xymon
-
-
-St. John's University - Technical Support                   Jan 2010 - June 2013
-8000 Utopia Parkway, Jamaica NY, 11439
-- Maintained a Bloomberg financial lab, 2 Mac OSX Labs, and 4 Windows XP/7 labs
-- Upgraded physical infrastructure including APs, switches, and routers
-- Conducted the imaging of desktops by configuring a PXE server with Clonezilla
 
 --------------------------------------------------------------------------------
 EDUCATION
