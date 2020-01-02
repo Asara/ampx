@@ -5,13 +5,20 @@
 --------------------------------------------------------------------------------
 EXPERIENCE
 --------------------------------------------------------------------------------
-Gemini Trust -  SRE                                          Oct. 2018 - Present
+Gemini Trust -  Senior SRE                                   Oct. 2018 - Present
 315 Park Ave South, New York NY, 10010
 - Logically built out disaster recovery site on bare metal and ran a BCP test
     against it
 - Developed python scripts to automate updates to our IPAM/DCIM systems
 - Served as the infrastructure liaison for CBOE futures settlements
 - Assisted in the hiring process, including conducting hands on tests
+- Reconfigured datacenter to allow for NIC bonding across multiple switches as
+    well as reconfigure our config management to apply Linux bonding
+- Built a proof of concept Kubernetes cluster on bare metal
+- Migrated AWS services to a new account using Terraform, including ASGs, DNS on
+    Route53, EC2 instances, and RDS instances.
+- Created alerting scripts using Amazon Lambda, while sending data to Cloudwatch
+    using the AWS API.
 
 
 MonetaGo -  Systems Architect                              Nov. 2016 - Oct. 2018
